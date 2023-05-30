@@ -1,0 +1,22 @@
+﻿Creator: Joshua Morris
+GitHub: JoshuaPMorris/BoidPlugin
+
+This plugin provides a complex system which dives into the world of Boids. The system is created with the plan to make 
+the code as understandable as possible. This plugin can be edited in various ways which is what is going to be discussed
+here with other topics which may interest you(Le User).
+
+(PS, this is my first project inside of Unreal Engine, the code may be rudimentary and  at times slightly hard to read.
+I have done my best to simplify and write what each function does.)
+
+Version 1.0
+
+Topic One: How does the Example level work.
+
+
+Topic Two: How Modular is this project.
+
+
+Topic Three: How can this project be added onto.
+
+
+Topic Four: Interesting ideas which I have that can be added.

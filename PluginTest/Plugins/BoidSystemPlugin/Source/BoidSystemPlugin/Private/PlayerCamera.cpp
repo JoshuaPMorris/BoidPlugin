@@ -72,20 +72,5 @@ void APlayerCamera::Tick(float DeltaTime)
 void APlayerCamera::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
-
-	//Hook up every-frame handling for our four axes
-	InputComponent->BindAxis("MoveUp", this, &APlayerCamera::MoveUp);
-	InputComponent->BindAxis("MoveRight", this, &APlayerCamera::MoveRight);
-}
-
-//Input functions
-void APlayerCamera::MoveUp(float AxisValue)
-{
-	MovementInput.X = FMath::Clamp<float>(AxisValue, -1.0f, 1.0f);
-}
-
-void APlayerCamera::MoveRight(float AxisValue)
-{
-	MovementInput.Y = FMath::Clamp<float>(AxisValue, -1.0f, 1.0f);
 }
 

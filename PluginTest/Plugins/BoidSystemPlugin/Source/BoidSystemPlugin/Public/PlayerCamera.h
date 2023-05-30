@@ -27,10 +27,6 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	//Input functions
-	void MoveUp(float AxisValue);
-	void MoveRight(float AxisValue);
-
 	//Input variables
 	FVector2D MovementInput;
 	
