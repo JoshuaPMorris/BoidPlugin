@@ -23,7 +23,7 @@ APlayerCamera::APlayerCamera()
 	CameraComp->SetupAttachment(SpringArmComp,USpringArmComponent::SocketName);
 	// 185.25 393 398 // 175 365 -0.5, 0.375 0.8 1  // 370 790
 	//Setting Default Variables and Behavior of the SpringArmComponent
-	SpringArmComp->SetRelativeLocationAndRotation(FVector(185.25f, 393.0f, 398.0f), FRotator(-90.0f, 0.0f, 0.0f));
+	//SpringArmComp->SetRelativeLocationAndRotation(FVector(185.25f, 393.0f, 398.0f), FRotator(-90.0f, 0.0f, 0.0f));
 	SpringArmComp->TargetArmLength = 0.f;
 	SpringArmComp->bEnableCameraLag = true;
 	SpringArmComp->CameraLagSpeed = 3.0f;
@@ -46,7 +46,7 @@ void APlayerCamera::BeginPlay()
 	
 	//GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Look! A BoidBrain..."));
 
-	this->SetActorRotation(FRotator(0, 0, 0));
+	//this->SetActorRotation(FRotator(0, 0, 0));
 }
 
 // Called every frame
@@ -54,18 +54,18 @@ void APlayerCamera::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	//Handle movement based on our "MoveX" and "MoveY" axes
-	{
-		if (!MovementInput.IsZero())
-		{
-			//Scale our movement input axis values by 100 units per second
-			MovementInput = MovementInput.GetSafeNormal() * 100.0f;
-			FVector NewLocation = GetActorLocation();
-			NewLocation += GetActorForwardVector() * MovementInput.X * DeltaTime;
-			NewLocation += GetActorRightVector() * MovementInput.Y * DeltaTime;
-			SetActorLocation(NewLocation);
-		}
-	}
+	////Handle movement based on our "MoveX" and "MoveY" axes
+	//{
+	//	if (!MovementInput.IsZero())
+	//	{
+	//		//Scale our movement input axis values by 100 units per second
+	//		MovementInput = MovementInput.GetSafeNormal() * 100.0f;
+	//		FVector NewLocation = GetActorLocation();
+	//		NewLocation += GetActorForwardVector() * MovementInput.X * DeltaTime;
+	//		NewLocation += GetActorRightVector() * MovementInput.Y * DeltaTime;
+	//		SetActorLocation(NewLocation);
+	//	}
+	//}
 }
 
 // Called to bind functionality to input

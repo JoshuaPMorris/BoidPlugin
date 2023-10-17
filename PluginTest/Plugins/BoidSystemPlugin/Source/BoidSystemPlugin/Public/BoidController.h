@@ -7,6 +7,7 @@
 
 #include "Boid.h"
 #include "FBoidRules.h"
+//#include "BoidSettings.h"
 
 #include "BoidController.generated.h"
 
@@ -82,6 +83,8 @@ protected:
 
 	bool LeftClick;
 	bool RightClick;
+
+	//BoidSettings Settings;
 	
 public:
 	virtual void Tick(float DeltaSeconds) override;

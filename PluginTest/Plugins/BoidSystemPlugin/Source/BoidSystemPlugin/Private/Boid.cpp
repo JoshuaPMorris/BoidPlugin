@@ -3,10 +3,9 @@
 
 #include "Boid.h"
 
-#include "BoidSettings.h"
 #include "Components/BoxComponent.h"
 
-BoidSettings Settings;
+//BoidSettings Settings;
 
 // Sets default values
 ABoid::ABoid()
@@ -47,11 +46,11 @@ void ABoid::BeginPlay()
 	
 	ListOfBoidsInVision.Empty();
 
-	if (Settings.ListOfBoids.Num() == 0)
-	{
-		Settings.ListOfBoids.Empty();
-	}
-	Settings.ListOfBoids.Add(this);
+	//if (Settings.ListOfBoids.Num() == 0)
+	//{
+	//	Settings.ListOfBoids.Empty();
+	//}
+	//Settings.ListOfBoids.Add(this);
 
 	SetIfConstantSpeed(false);
 	SetMaxAcceleration(100);
