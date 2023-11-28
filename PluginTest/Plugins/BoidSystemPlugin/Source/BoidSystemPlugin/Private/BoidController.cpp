@@ -44,6 +44,13 @@ void ABoidController::BeginPlay()
 		Boid->SetActorRotation(FRotator(0));
 
 		CachedBoids.Emplace(Boid);
+		if (i == StartingBoids)
+		{
+			for (int j = 0; j <= StartingBoids - 1; j++)
+			{
+				CachedBoids[j]->Settings.ListOfBoids = CachedBoids;
+			}
+		}
 	}
 }
 

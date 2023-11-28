@@ -2,10 +2,14 @@
 
 #pragma once
 
+
 #include "CoreMinimal.h"
 #include "FBoidRules.h"
 
+#include "BoidSettings.h"
+
 #include "Boid.generated.h"
+
 
 UCLASS()
 class BOIDSYSTEMPLUGIN_API ABoid : public AActor
@@ -68,6 +72,7 @@ public:
 	FVector2D Acceleration;
 	float MaxAcceleration;
 
+	BoidSettings Settings;
 	
 	UPROPERTY(VisibleAnywhere)
 	TArray<ABoid*> ListOfBoidsInVision;
